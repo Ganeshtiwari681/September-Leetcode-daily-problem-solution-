@@ -1,0 +1,13 @@
+class Solution:
+    def construct2DArray(self, o: List[int], m: int, n: int) -> List[List[int]]:
+        arr2=[]
+        r=0
+        if m*n!=len(o):
+            return []
+        for i in range(m):
+            arr1=[]
+            for i in range(n):
+                arr1.append(o[r])
+                r+=1
+            arr2.append(arr1)
+        return arr2
