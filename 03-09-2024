@@ -1,0 +1,15 @@
+class Solution:
+    def getLucky(self, s: str, k: int) -> int:
+        st=""
+        for i in s:
+            st=st+str(ord(i)-96)
+        print(st)
+        while k:
+            sum=0
+            for i in st:
+                sum+=int(i)
+            k=k-1
+            st=str(sum)
+        return sum
+
+        
